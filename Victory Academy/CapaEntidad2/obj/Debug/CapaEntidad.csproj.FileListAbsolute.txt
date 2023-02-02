@@ -1,0 +1,6 @@
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\bin\Debug\CapaEntidad2.dll
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\bin\Debug\CapaEntidad2.pdb
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\obj\Debug\CapaEntidad2.dll
+E:\Victory Academy\Repos\Victory Academy\CapaEntidad2\obj\Debug\CapaEntidad2.pdb

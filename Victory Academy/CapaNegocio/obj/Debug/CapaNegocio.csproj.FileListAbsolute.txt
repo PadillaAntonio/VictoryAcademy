@@ -1,0 +1,11 @@
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaNegocio.dll
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaNegocio.pdb
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaDatos.dll
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaDatos.pdb
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\obj\Debug\CapaNegocio.dll
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\obj\Debug\CapaNegocio.pdb
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaEntidad2.dll
+E:\Victory Academy\Repos\Victory Academy\CapaNegocio\bin\Debug\CapaEntidad2.pdb
