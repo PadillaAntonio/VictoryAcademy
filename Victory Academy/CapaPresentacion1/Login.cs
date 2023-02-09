@@ -34,6 +34,8 @@ namespace CapaPresentacion1
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
             this.Show();
+            txtClave.Text = "";
+            txtUsuario.Text = "";
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
