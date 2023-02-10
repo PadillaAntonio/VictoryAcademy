@@ -28,33 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.GridGrados = new System.Windows.Forms.DataGridView();
+            this.GradoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marcado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.GradoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblSinDatos = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnBorrar = new FontAwesome.Sharp.IconButton();
+            this.btnModificar = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.GridGrados)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // GridGrados
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 174);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Formulario de Grados";
+            this.GridGrados.AllowUserToDeleteRows = false;
+            this.GridGrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridGrados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GradoId,
+            this.Marcado,
+            this.GradoDescripcion});
+            this.GridGrados.Location = new System.Drawing.Point(12, 12);
+            this.GridGrados.MultiSelect = false;
+            this.GridGrados.Name = "GridGrados";
+            this.GridGrados.ReadOnly = true;
+            this.GridGrados.Size = new System.Drawing.Size(422, 316);
+            this.GridGrados.TabIndex = 0;
+            // 
+            // GradoId
+            // 
+            this.GradoId.HeaderText = "";
+            this.GradoId.Name = "GradoId";
+            this.GradoId.ReadOnly = true;
+            this.GradoId.Visible = false;
+            // 
+            // Marcado
+            // 
+            this.Marcado.FalseValue = "0";
+            this.Marcado.HeaderText = "";
+            this.Marcado.Name = "Marcado";
+            this.Marcado.ReadOnly = true;
+            this.Marcado.TrueValue = "1";
+            this.Marcado.Width = 20;
+            // 
+            // GradoDescripcion
+            // 
+            this.GradoDescripcion.HeaderText = "Grado";
+            this.GradoDescripcion.Name = "GradoDescripcion";
+            this.GradoDescripcion.ReadOnly = true;
+            // 
+            // lblSinDatos
+            // 
+            this.lblSinDatos.AutoSize = true;
+            this.lblSinDatos.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinDatos.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblSinDatos.Location = new System.Drawing.Point(129, 134);
+            this.lblSinDatos.Name = "lblSinDatos";
+            this.lblSinDatos.Size = new System.Drawing.Size(163, 24);
+            this.lblSinDatos.TabIndex = 1;
+            this.lblSinDatos.Text = "NO HAY DATOS";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnModificar);
+            this.panel1.Controls.Add(this.btnBorrar);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Controls.Add(this.lblSinDatos);
+            this.panel1.Controls.Add(this.GridGrados);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(446, 406);
+            this.panel1.TabIndex = 2;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnNuevo.IconColor = System.Drawing.Color.Black;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.Location = new System.Drawing.Point(13, 335);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(127, 46);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBorrar.IconColor = System.Drawing.Color.Black;
+            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBorrar.Location = new System.Drawing.Point(160, 334);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(127, 46);
+            this.btnBorrar.TabIndex = 3;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnModificar.IconColor = System.Drawing.Color.Black;
+            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificar.Location = new System.Drawing.Point(307, 335);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(127, 46);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // FrmGrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(446, 406);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmGrados";
             this.Text = "FrmGrados";
+            this.Load += new System.EventHandler(this.FrmGrados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridGrados)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView GridGrados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GradoId;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Marcado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GradoDescripcion;
+        private System.Windows.Forms.Label lblSinDatos;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnModificar;
+        private FontAwesome.Sharp.IconButton btnBorrar;
+        private FontAwesome.Sharp.IconButton btnNuevo;
     }
 }

@@ -27,6 +27,12 @@ namespace CapaPresentacion1
         private void Inicio_Load(object sender, EventArgs e)
         {
             lblUser.Text = usuarioActual.Nick.Trim();
+            if (!usuarioActual.EsAdmin) 
+            {
+                MenuDefiniciones.Visible = false;
+                MenuAfiliacion.Visible = false; 
+                MenuFinanza.Visible= false;
+            }
         }
 
         private void AbrirFormulario (IconMenuItem menu, Form formulario) 

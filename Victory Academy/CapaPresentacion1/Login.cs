@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidad;
+using System.Drawing.Text;
 
 namespace CapaPresentacion1
 {
@@ -16,7 +17,8 @@ namespace CapaPresentacion1
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Nick == txtUsuario.Text && u.Clave == txtClave.Text).FirstOrDefault();
+            string usuarioClave = FuncionesGenerales.Encriptar(txtClave.Text);
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Nick == txtUsuario.Text && u.Clave == usuarioClave).FirstOrDefault();
             if (ousuario != null)
             {
                 Inicio form = new Inicio(ousuario);
