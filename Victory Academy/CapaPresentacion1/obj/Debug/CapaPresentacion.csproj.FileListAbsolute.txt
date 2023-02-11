@@ -20,3 +20,4 @@ E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\bin\Debug\CapaEntidad
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\bin\Debug\CapaEntidad2.pdb
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmGrados.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmTiposProgramas.resources
+E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmABMGrados.resources

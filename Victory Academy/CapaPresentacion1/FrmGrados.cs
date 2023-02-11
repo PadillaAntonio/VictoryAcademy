@@ -1,4 +1,5 @@
 ﻿using CapaEntidad;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace CapaPresentacion1
     public partial class FrmGrados : Form
     {
         private List<Grado> grados = new List<Grado>();
+        private CN_Grado objGrado = new CN_Grado();
         public FrmGrados()
         {
             InitializeComponent();
@@ -22,7 +24,8 @@ namespace CapaPresentacion1
 
         private void FrmGrados_Load(object sender, EventArgs e)
         {
-            if (grados != null) 
+            grados = objGrado.Listar();
+            if (grados.Count != 0) 
             {
                 GridGrados.Visible = true;
                 lblSinDatos.Visible= false;
@@ -30,6 +33,7 @@ namespace CapaPresentacion1
                 {
                     GridGrados.Rows.Add(new object[] { grado.Id, 0, grado.Descripcion });
                 }
+                GridGrados.Refresh();
             }
             else
             {
@@ -37,6 +41,19 @@ namespace CapaPresentacion1
                 lblSinDatos.Visible= true;
                 // mensaje en el grid de que no hay nada ingresado aún
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FrmABMGrados AbmGrados = new FrmABMGrados(0,"INS");
+            AbmGrados.ShowDialog();
+            AbmGrados.FormClosing += frm_closing;
+        }
+
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
+            FrmGrados_Load(sender, e);
         }
     }
 }

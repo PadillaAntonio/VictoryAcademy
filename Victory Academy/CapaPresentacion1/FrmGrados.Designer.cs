@@ -34,9 +34,10 @@
             this.GradoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
-            this.btnBorrar = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
+            this.btnBorrar = new FontAwesome.Sharp.IconButton();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridGrados)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnBorrar);
             this.panel1.Controls.Add(this.btnNuevo);
@@ -102,6 +104,34 @@
             this.panel1.Size = new System.Drawing.Size(446, 406);
             this.panel1.TabIndex = 2;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnModificar.IconColor = System.Drawing.Color.Black;
+            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificar.Location = new System.Drawing.Point(231, 334);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(92, 45);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBorrar.IconColor = System.Drawing.Color.Black;
+            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBorrar.Location = new System.Drawing.Point(121, 335);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(92, 45);
+            this.btnBorrar.TabIndex = 3;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,38 +141,25 @@
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.Location = new System.Drawing.Point(13, 335);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(127, 46);
+            this.btnNuevo.Size = new System.Drawing.Size(92, 45);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnBorrar
+            // iconButton1
             // 
-            this.btnBorrar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnBorrar.IconColor = System.Drawing.Color.Black;
-            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBorrar.Location = new System.Drawing.Point(160, 334);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(127, 46);
-            this.btnBorrar.TabIndex = 3;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnModificar.IconColor = System.Drawing.Color.Black;
-            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnModificar.Location = new System.Drawing.Point(307, 335);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(127, 46);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.DarkRed;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(342, 335);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(92, 45);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.Text = "Actualizar";
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // FrmGrados
             // 
@@ -171,5 +188,6 @@
         private FontAwesome.Sharp.IconButton btnModificar;
         private FontAwesome.Sharp.IconButton btnBorrar;
         private FontAwesome.Sharp.IconButton btnNuevo;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

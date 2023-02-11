@@ -34,22 +34,22 @@
             this.SubMenuTipoProgramas = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuTipoTelefono = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuTipoCompetencia = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuTiposTorneos = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuMonedas = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuConceptos = new FontAwesome.Sharp.IconMenuItem();
             this.MenuAfiliacion = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuPersonas = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.MenuTorneos = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuTorneos = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuPuntosPersonas = new FontAwesome.Sharp.IconMenuItem();
             this.MenuFinanza = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuVentas = new FontAwesome.Sharp.IconMenuItem();
             this.lblLogo = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.SubMenuPersonas = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuMonedas = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuConceptos = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuTorneos = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuTiposTorneos = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuPuntosPersonas = new FontAwesome.Sharp.IconMenuItem();
-            this.SubMenuVentas = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,36 @@
             this.SubMenuTipoCompetencia.Text = "Tipo de Competencia";
             this.SubMenuTipoCompetencia.Click += new System.EventHandler(this.SubMenuTipoCompetencia_Click);
             // 
+            // SubMenuTiposTorneos
+            // 
+            this.SubMenuTiposTorneos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuTiposTorneos.IconColor = System.Drawing.Color.Black;
+            this.SubMenuTiposTorneos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuTiposTorneos.Name = "SubMenuTiposTorneos";
+            this.SubMenuTiposTorneos.Size = new System.Drawing.Size(219, 24);
+            this.SubMenuTiposTorneos.Text = "Tipos de Torneos";
+            this.SubMenuTiposTorneos.Click += new System.EventHandler(this.SubMenuTiposTorneos_Click);
+            // 
+            // SubMenuMonedas
+            // 
+            this.SubMenuMonedas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuMonedas.IconColor = System.Drawing.Color.Black;
+            this.SubMenuMonedas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuMonedas.Name = "SubMenuMonedas";
+            this.SubMenuMonedas.Size = new System.Drawing.Size(219, 24);
+            this.SubMenuMonedas.Text = "Monedas";
+            this.SubMenuMonedas.Click += new System.EventHandler(this.SubMenuMonedas_Click);
+            // 
+            // SubMenuConceptos
+            // 
+            this.SubMenuConceptos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuConceptos.IconColor = System.Drawing.Color.Black;
+            this.SubMenuConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuConceptos.Name = "SubMenuConceptos";
+            this.SubMenuConceptos.Size = new System.Drawing.Size(219, 24);
+            this.SubMenuConceptos.Text = "Conceptos";
+            this.SubMenuConceptos.Click += new System.EventHandler(this.SubMenuConceptos_Click);
+            // 
             // MenuAfiliacion
             // 
             this.MenuAfiliacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -143,6 +173,26 @@
             this.MenuAfiliacion.Size = new System.Drawing.Size(99, 106);
             this.MenuAfiliacion.Text = "Afiliaciones";
             this.MenuAfiliacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // SubMenuPersonas
+            // 
+            this.SubMenuPersonas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuPersonas.IconColor = System.Drawing.Color.Black;
+            this.SubMenuPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuPersonas.Name = "SubMenuPersonas";
+            this.SubMenuPersonas.Size = new System.Drawing.Size(139, 24);
+            this.SubMenuPersonas.Text = "Personas";
+            this.SubMenuPersonas.Click += new System.EventHandler(this.SubMenuPersonas_Click);
+            // 
+            // SubMenuUsuarios
+            // 
+            this.SubMenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuUsuarios.IconColor = System.Drawing.Color.Black;
+            this.SubMenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuUsuarios.Name = "SubMenuUsuarios";
+            this.SubMenuUsuarios.Size = new System.Drawing.Size(139, 24);
+            this.SubMenuUsuarios.Text = "Usuarios";
+            this.SubMenuUsuarios.Click += new System.EventHandler(this.SubMenuUsuarios_Click);
             // 
             // MenuTorneos
             // 
@@ -160,6 +210,26 @@
             this.MenuTorneos.Text = "Torneos";
             this.MenuTorneos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // SubMenuTorneos
+            // 
+            this.SubMenuTorneos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuTorneos.IconColor = System.Drawing.Color.Black;
+            this.SubMenuTorneos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuTorneos.Name = "SubMenuTorneos";
+            this.SubMenuTorneos.Size = new System.Drawing.Size(193, 24);
+            this.SubMenuTorneos.Text = "Torneos";
+            this.SubMenuTorneos.Click += new System.EventHandler(this.SubMenuTorneos_Click);
+            // 
+            // SubMenuPuntosPersonas
+            // 
+            this.SubMenuPuntosPersonas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuPuntosPersonas.IconColor = System.Drawing.Color.Black;
+            this.SubMenuPuntosPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuPuntosPersonas.Name = "SubMenuPuntosPersonas";
+            this.SubMenuPuntosPersonas.Size = new System.Drawing.Size(193, 24);
+            this.SubMenuPuntosPersonas.Text = "Puntos x Persona";
+            this.SubMenuPuntosPersonas.Click += new System.EventHandler(this.SubMenuPuntosPersonas_Click);
+            // 
             // MenuFinanza
             // 
             this.MenuFinanza.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -174,6 +244,16 @@
             this.MenuFinanza.Size = new System.Drawing.Size(79, 106);
             this.MenuFinanza.Text = "Finanzas";
             this.MenuFinanza.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // SubMenuVentas
+            // 
+            this.SubMenuVentas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuVentas.IconColor = System.Drawing.Color.Black;
+            this.SubMenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuVentas.Name = "SubMenuVentas";
+            this.SubMenuVentas.Size = new System.Drawing.Size(124, 24);
+            this.SubMenuVentas.Text = "Ventas";
+            this.SubMenuVentas.Click += new System.EventHandler(this.SubMenuVentas_Click);
             // 
             // lblLogo
             // 
@@ -230,95 +310,15 @@
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 169);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(922, 346);
+            this.Contenedor.Size = new System.Drawing.Size(922, 416);
             this.Contenedor.TabIndex = 6;
-            // 
-            // SubMenuPersonas
-            // 
-            this.SubMenuPersonas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuPersonas.IconColor = System.Drawing.Color.Black;
-            this.SubMenuPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuPersonas.Name = "SubMenuPersonas";
-            this.SubMenuPersonas.Size = new System.Drawing.Size(180, 24);
-            this.SubMenuPersonas.Text = "Personas";
-            this.SubMenuPersonas.Click += new System.EventHandler(this.SubMenuPersonas_Click);
-            // 
-            // SubMenuUsuarios
-            // 
-            this.SubMenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuUsuarios.IconColor = System.Drawing.Color.Black;
-            this.SubMenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuUsuarios.Name = "SubMenuUsuarios";
-            this.SubMenuUsuarios.Size = new System.Drawing.Size(180, 24);
-            this.SubMenuUsuarios.Text = "Usuarios";
-            this.SubMenuUsuarios.Click += new System.EventHandler(this.SubMenuUsuarios_Click);
-            // 
-            // SubMenuMonedas
-            // 
-            this.SubMenuMonedas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuMonedas.IconColor = System.Drawing.Color.Black;
-            this.SubMenuMonedas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuMonedas.Name = "SubMenuMonedas";
-            this.SubMenuMonedas.Size = new System.Drawing.Size(219, 24);
-            this.SubMenuMonedas.Text = "Monedas";
-            this.SubMenuMonedas.Click += new System.EventHandler(this.SubMenuMonedas_Click);
-            // 
-            // SubMenuConceptos
-            // 
-            this.SubMenuConceptos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuConceptos.IconColor = System.Drawing.Color.Black;
-            this.SubMenuConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuConceptos.Name = "SubMenuConceptos";
-            this.SubMenuConceptos.Size = new System.Drawing.Size(219, 24);
-            this.SubMenuConceptos.Text = "Conceptos";
-            this.SubMenuConceptos.Click += new System.EventHandler(this.SubMenuConceptos_Click);
-            // 
-            // SubMenuTorneos
-            // 
-            this.SubMenuTorneos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuTorneos.IconColor = System.Drawing.Color.Black;
-            this.SubMenuTorneos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuTorneos.Name = "SubMenuTorneos";
-            this.SubMenuTorneos.Size = new System.Drawing.Size(193, 24);
-            this.SubMenuTorneos.Text = "Torneos";
-            this.SubMenuTorneos.Click += new System.EventHandler(this.SubMenuTorneos_Click);
-            // 
-            // SubMenuTiposTorneos
-            // 
-            this.SubMenuTiposTorneos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuTiposTorneos.IconColor = System.Drawing.Color.Black;
-            this.SubMenuTiposTorneos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuTiposTorneos.Name = "SubMenuTiposTorneos";
-            this.SubMenuTiposTorneos.Size = new System.Drawing.Size(219, 24);
-            this.SubMenuTiposTorneos.Text = "Tipos de Torneos";
-            this.SubMenuTiposTorneos.Click += new System.EventHandler(this.SubMenuTiposTorneos_Click);
-            // 
-            // SubMenuPuntosPersonas
-            // 
-            this.SubMenuPuntosPersonas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuPuntosPersonas.IconColor = System.Drawing.Color.Black;
-            this.SubMenuPuntosPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuPuntosPersonas.Name = "SubMenuPuntosPersonas";
-            this.SubMenuPuntosPersonas.Size = new System.Drawing.Size(193, 24);
-            this.SubMenuPuntosPersonas.Text = "Puntos x Persona";
-            this.SubMenuPuntosPersonas.Click += new System.EventHandler(this.SubMenuPuntosPersonas_Click);
-            // 
-            // SubMenuVentas
-            // 
-            this.SubMenuVentas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SubMenuVentas.IconColor = System.Drawing.Color.Black;
-            this.SubMenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SubMenuVentas.Name = "SubMenuVentas";
-            this.SubMenuVentas.Size = new System.Drawing.Size(180, 24);
-            this.SubMenuVentas.Text = "Ventas";
-            this.SubMenuVentas.Click += new System.EventHandler(this.SubMenuVentas_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(922, 515);
+            this.ClientSize = new System.Drawing.Size(922, 585);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblUsuario);
