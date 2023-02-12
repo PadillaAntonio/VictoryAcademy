@@ -128,7 +128,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
-                    SqlCommand cmd = new SqlCommand("SP_EditaGrado", oconexion);
+                    SqlCommand cmd = new SqlCommand("SP_EliminaGrado", oconexion);
                     cmd.Parameters.AddWithValue("id", id);
                     cmd.Parameters.Add("resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;

@@ -60,6 +60,7 @@ namespace CapaPresentacion1
 
         private void SubMenuGrados_Click(object sender, EventArgs e)
         {
+            Contenedor.Dock = DockStyle.None;
             AbrirFormulario((IconMenuItem)sender, new FrmGrados());
         }
 

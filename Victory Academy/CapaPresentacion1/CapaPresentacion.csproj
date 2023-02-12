@@ -145,6 +145,7 @@
     <Compile Include="FrmTiposProgramas.Designer.cs">
       <DependentUpon>FrmTiposProgramas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades\OpcionCombo.cs" />
     <EmbeddedResource Include="FrmABMGrados.resx">
       <DependentUpon>FrmABMGrados.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FrmTiposProgramas.resx">
       <DependentUpon>FrmTiposProgramas.cs</DependentUpon>
@@ -179,6 +181,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Check1.eps" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -192,6 +195,12 @@
       <Project>{b03f34c8-2513-4a4e-8866-1744d2b226e1}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_016.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
