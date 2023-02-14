@@ -55,23 +55,32 @@ namespace CapaPresentacion1
 
         private void Limpiar() 
         {
-            txtDescripcion.Text = "";
+            txtDescripcion.Text = string.Empty;
+            txtCodigo.Text = string.Empty;
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            Mensaje = objGrado.Actualizar(Convert.ToInt32(txtCodigo.Text), txtDescripcion.Text);
-            MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Limpiar();
-            FrmGrados_Load(sender, EventArgs.Empty);
+            DialogResult res = MessageBox.Show("Se va a modificar el registro. \n¿Desea continuar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (res == DialogResult.Yes)
+            {
+                Mensaje = objGrado.Actualizar(Convert.ToInt32(txtCodigo.Text), txtDescripcion.Text);
+                MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Limpiar();
+                FrmGrados_Load(sender, EventArgs.Empty);
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            Mensaje = objGrado.Eliminar(Convert.ToInt32(txtCodigo.Text));
-            MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Limpiar();
-            FrmGrados_Load(sender, EventArgs.Empty);
+            DialogResult res = MessageBox.Show("¿Está seguro que quiere eliminar el registro?","Mensaje",MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (res == DialogResult.Yes) 
+            {
+                Mensaje = objGrado.Eliminar(Convert.ToInt32(txtCodigo.Text));
+                MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Limpiar();
+                FrmGrados_Load(sender, EventArgs.Empty);
+            }
         }
 
         private void GridGrados_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -88,6 +97,42 @@ namespace CapaPresentacion1
                 e.Graphics.DrawImage(Properties.Resources.Check16, new Rectangle(x, y, w, h));
                 e.Handled= true;
             }
+        }
+
+        private void GridGrados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GridGrados.Columns[e.ColumnIndex].Name == "GrdBtnSel") 
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtCodigo.Text = GridGrados.Rows[indice].Cells["GradoId"].Value.ToString();
+                    txtDescripcion.Text = GridGrados.Rows[indice].Cells["GradoDescripcion"].Value.ToString();
+                }
+            }
+        }
+
+        private void Buscar()
+        {
+            if (GridGrados.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in GridGrados.Rows)
+                {
+                    if (row.Cells["GradoDescripcion"].Value.ToString().Trim().ToUpper().Contains(txtBusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else 
+                    { 
+                        row.Visible = false; 
+                    }
+                }
+            }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
         }
     }
 }

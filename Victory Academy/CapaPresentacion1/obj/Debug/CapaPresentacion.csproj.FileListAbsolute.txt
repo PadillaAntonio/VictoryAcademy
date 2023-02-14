@@ -10,7 +10,6 @@ E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\bin\Debug\CapaNegocio
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\bin\Debug\CapaDatos.pdb
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
-E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmABMGrados.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmGrados.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.Inicio.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.Login.resources

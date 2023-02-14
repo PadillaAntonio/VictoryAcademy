@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CD_Grados.cs" />
+    <Compile Include="CD_TipoPrograma.cs" />
     <Compile Include="CD_Usuario.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -17,11 +17,6 @@ namespace CapaNegocio
             return objcd_Grados.Listar();
         }
 
-        public string GetDescripcion(int id)
-        {
-            return objcd_Grados.GetDescripcion(id);
-        }
-
         public string Insertar(string descripcion)
         {
             return objcd_Grados.Insertar(descripcion);
