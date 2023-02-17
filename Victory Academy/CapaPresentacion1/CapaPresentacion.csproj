@@ -143,6 +143,9 @@
     <EmbeddedResource Include="FrmGrados.resx">
       <DependentUpon>FrmGrados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposTelefonos.resx">
+      <DependentUpon>FrmTiposTelefonos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

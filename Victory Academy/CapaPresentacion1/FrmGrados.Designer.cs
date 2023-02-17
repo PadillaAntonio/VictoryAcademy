@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GridGrados = new System.Windows.Forms.DataGridView();
             this.GradoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrdBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -38,15 +38,15 @@
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblTituloGrid = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.BtnEliminar = new FontAwesome.Sharp.IconButton();
-            this.BtnEditar = new FontAwesome.Sharp.IconButton();
-            this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.lblTituloDetalle = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblGradoId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnEliminar = new FontAwesome.Sharp.IconButton();
+            this.BtnEditar = new FontAwesome.Sharp.IconButton();
+            this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridGrados)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,8 +91,8 @@
             // GradoDescripcion
             // 
             this.GradoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GradoDescripcion.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GradoDescripcion.DefaultCellStyle = dataGridViewCellStyle1;
             this.GradoDescripcion.DividerWidth = 2;
             this.GradoDescripcion.HeaderText = "Grado";
             this.GradoDescripcion.Name = "GradoDescripcion";
@@ -115,7 +115,7 @@
             this.panel1.Controls.Add(this.lblBusqueda);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Controls.Add(this.lblTituloGrid);
-            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Controls.Add(this.lblTituloDetalle);
             this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnEditar);
             this.panel1.Controls.Add(this.BtnRegistrar);
@@ -160,62 +160,23 @@
             this.lblTituloGrid.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloGrid.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloGrid.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTituloGrid.Location = new System.Drawing.Point(237, 20);
+            this.lblTituloGrid.Location = new System.Drawing.Point(243, 20);
             this.lblTituloGrid.Name = "lblTituloGrid";
             this.lblTituloGrid.Size = new System.Drawing.Size(180, 35);
             this.lblTituloGrid.TabIndex = 11;
             this.lblTituloGrid.Text = "Lista Grados";
             // 
-            // lblTitulo
+            // lblTituloDetalle
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Black;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Red;
-            this.lblTitulo.Location = new System.Drawing.Point(23, 20);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(103, 35);
-            this.lblTitulo.TabIndex = 7;
-            this.lblTitulo.Text = "Detalle";
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnEliminar.IconColor = System.Drawing.Color.Black;
-            this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEliminar.Location = new System.Drawing.Point(24, 279);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(177, 23);
-            this.BtnEliminar.TabIndex = 10;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnEditar.IconColor = System.Drawing.Color.Black;
-            this.BtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEditar.Location = new System.Drawing.Point(24, 250);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(177, 23);
-            this.BtnEditar.TabIndex = 9;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnRegistrar
-            // 
-            this.BtnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnRegistrar.IconColor = System.Drawing.Color.Black;
-            this.BtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRegistrar.Location = new System.Drawing.Point(24, 221);
-            this.BtnRegistrar.Name = "BtnRegistrar";
-            this.BtnRegistrar.Size = new System.Drawing.Size(177, 23);
-            this.BtnRegistrar.TabIndex = 8;
-            this.BtnRegistrar.Text = "Registrar";
-            this.BtnRegistrar.UseVisualStyleBackColor = true;
-            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
+            this.lblTituloDetalle.AutoSize = true;
+            this.lblTituloDetalle.BackColor = System.Drawing.Color.Black;
+            this.lblTituloDetalle.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloDetalle.ForeColor = System.Drawing.Color.Red;
+            this.lblTituloDetalle.Location = new System.Drawing.Point(23, 20);
+            this.lblTituloDetalle.Name = "lblTituloDetalle";
+            this.lblTituloDetalle.Size = new System.Drawing.Size(103, 35);
+            this.lblTituloDetalle.TabIndex = 7;
+            this.lblTituloDetalle.Text = "Detalle";
             // 
             // txtDescripcion
             // 
@@ -265,6 +226,45 @@
             this.label1.Size = new System.Drawing.Size(237, 390);
             this.label1.TabIndex = 6;
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnEliminar.IconColor = System.Drawing.Color.Black;
+            this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnEliminar.Location = new System.Drawing.Point(24, 279);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(177, 23);
+            this.BtnEliminar.TabIndex = 10;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnEditar.IconColor = System.Drawing.Color.Black;
+            this.BtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnEditar.Location = new System.Drawing.Point(24, 250);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(177, 23);
+            this.BtnEditar.TabIndex = 9;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnRegistrar
+            // 
+            this.BtnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnRegistrar.IconColor = System.Drawing.Color.Black;
+            this.BtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRegistrar.Location = new System.Drawing.Point(24, 221);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.Size = new System.Drawing.Size(177, 23);
+            this.BtnRegistrar.TabIndex = 8;
+            this.BtnRegistrar.Text = "Registrar";
+            this.BtnRegistrar.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
+            // 
             // FrmGrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +289,7 @@
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnEditar;
         private FontAwesome.Sharp.IconButton BtnRegistrar;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTituloDetalle;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtCodigo;

@@ -20,3 +20,4 @@ E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresent
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion.csproj.CopyComplete
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.exe
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.pdb
+E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmTiposTelefonos.resources
