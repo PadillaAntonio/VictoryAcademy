@@ -76,7 +76,7 @@ namespace CapaPresentacion1
 
         private void SubMenuTipoCompetencia_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new FrmTiposCompetencias());
+            AbrirFormulario((IconMenuItem)sender, new FrmTipoCompetencia());
         }
 
         private void SubMenuTiposTorneos_Click(object sender, EventArgs e)

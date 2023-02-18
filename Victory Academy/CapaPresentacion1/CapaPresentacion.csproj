@@ -83,11 +83,11 @@
     <Compile Include="FrmPuntosXPersona.Designer.cs">
       <DependentUpon>FrmPuntosXPersona.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTiposCompetencias.cs">
+    <Compile Include="FrmTipoCompetencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTiposCompetencias.Designer.cs">
-      <DependentUpon>FrmTiposCompetencias.cs</DependentUpon>
+    <Compile Include="FrmTipoCompetencia.Designer.cs">
+      <DependentUpon>FrmTipoCompetencia.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTiposTelefonos.cs">
       <SubType>Form</SubType>
@@ -142,6 +142,9 @@
     <Compile Include="Utilidades\OpcionCombo.cs" />
     <EmbeddedResource Include="FrmGrados.resx">
       <DependentUpon>FrmGrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoCompetencia.resx">
+      <DependentUpon>FrmTipoCompetencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTiposTelefonos.resx">
       <DependentUpon>FrmTiposTelefonos.cs</DependentUpon>
