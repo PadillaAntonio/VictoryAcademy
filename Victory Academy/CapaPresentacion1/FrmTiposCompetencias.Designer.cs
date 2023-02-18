@@ -30,8 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmTiposCompetencias";
+            this.ClientSize = new System.Drawing.Size(760, 399);
+            this.Controls.Add(this.panel1);
+            this.Name = "FrmTiposCompetencias";
+            this.Text = "Tipos de competencia";
+            this.Load += new System.EventHandler(this.FrmTiposCompetencias_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridTipoCompetencia)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridTipoCompetencia)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
