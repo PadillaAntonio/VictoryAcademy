@@ -149,6 +149,9 @@
     <EmbeddedResource Include="FrmTiposTelefonos.resx">
       <DependentUpon>FrmTiposTelefonos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposTorneos.resx">
+      <DependentUpon>FrmTiposTorneos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

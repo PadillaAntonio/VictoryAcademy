@@ -45,6 +45,7 @@
     <Compile Include="CN_TipoCompetencia.cs" />
     <Compile Include="CN_TipoProgramas.cs" />
     <Compile Include="CN_TipoTelefono.cs" />
+    <Compile Include="CN_TipoTorneo.cs" />
     <Compile Include="CN_Usuario.cs" />
     <Compile Include="FuncionesGenerales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
