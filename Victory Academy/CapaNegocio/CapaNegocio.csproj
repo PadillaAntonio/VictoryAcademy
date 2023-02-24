@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_Grado.cs" />
+    <Compile Include="CN_Moneda.cs" />
     <Compile Include="CN_TipoCompetencia.cs" />
     <Compile Include="CN_TipoProgramas.cs" />
     <Compile Include="CN_TipoTelefono.cs" />

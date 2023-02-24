@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.GridTipoProgramas = new System.Windows.Forms.DataGridView();
+            this.TipoProgramaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TipoProgramaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTituloGrid = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -44,15 +47,14 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblTituloDetalle = new System.Windows.Forms.Label();
             this.lblIzquierda = new System.Windows.Forms.Label();
-            this.TipoProgramaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TipoProgramaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipoProgramas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnLimpiar);
             this.panel1.Controls.Add(this.lblSinDatos);
             this.panel1.Controls.Add(this.lblBusqueda);
             this.panel1.Controls.Add(this.txtBusqueda);
@@ -126,118 +128,6 @@
             this.GridTipoProgramas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTipoProgramas_CellContentClick);
             this.GridTipoProgramas.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.GridTipoProgramas_CellPainting);
             // 
-            // lblTituloGrid
-            // 
-            this.lblTituloGrid.AutoSize = true;
-            this.lblTituloGrid.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloGrid.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloGrid.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblTituloGrid.Location = new System.Drawing.Point(239, 16);
-            this.lblTituloGrid.Name = "lblTituloGrid";
-            this.lblTituloGrid.Size = new System.Drawing.Size(223, 35);
-            this.lblTituloGrid.TabIndex = 9;
-            this.lblTituloGrid.Text = "Lista Programas";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.Location = new System.Drawing.Point(18, 309);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(177, 23);
-            this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEditar.IconColor = System.Drawing.Color.Black;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.Location = new System.Drawing.Point(18, 280);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(177, 23);
-            this.btnEditar.TabIndex = 7;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnRegistrar.IconColor = System.Drawing.Color.Black;
-            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrar.Location = new System.Drawing.Point(18, 251);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(177, 23);
-            this.btnRegistrar.TabIndex = 6;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(18, 212);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(177, 20);
-            this.txtDescripcion.TabIndex = 5;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(18, 132);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(70, 20);
-            this.txtCodigo.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(13, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Descripción:";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.BackColor = System.Drawing.Color.Black;
-            this.lblCodigo.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.Red;
-            this.lblCodigo.Location = new System.Drawing.Point(12, 87);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(86, 25);
-            this.lblCodigo.TabIndex = 2;
-            this.lblCodigo.Text = "Código:";
-            // 
-            // lblTituloDetalle
-            // 
-            this.lblTituloDetalle.AutoSize = true;
-            this.lblTituloDetalle.BackColor = System.Drawing.Color.Black;
-            this.lblTituloDetalle.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloDetalle.ForeColor = System.Drawing.Color.Red;
-            this.lblTituloDetalle.Location = new System.Drawing.Point(12, 16);
-            this.lblTituloDetalle.Name = "lblTituloDetalle";
-            this.lblTituloDetalle.Size = new System.Drawing.Size(103, 35);
-            this.lblTituloDetalle.TabIndex = 1;
-            this.lblTituloDetalle.Text = "Detalle";
-            // 
-            // lblIzquierda
-            // 
-            this.lblIzquierda.BackColor = System.Drawing.Color.Black;
-            this.lblIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblIzquierda.Location = new System.Drawing.Point(0, 0);
-            this.lblIzquierda.Name = "lblIzquierda";
-            this.lblIzquierda.Size = new System.Drawing.Size(237, 417);
-            this.lblIzquierda.TabIndex = 0;
-            // 
             // TipoProgramaId
             // 
             this.TipoProgramaId.HeaderText = "Codigo";
@@ -255,11 +145,136 @@
             // TipoProgramaDescripcion
             // 
             this.TipoProgramaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoProgramaDescripcion.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoProgramaDescripcion.DefaultCellStyle = dataGridViewCellStyle1;
             this.TipoProgramaDescripcion.HeaderText = "Descripcion";
             this.TipoProgramaDescripcion.Name = "TipoProgramaDescripcion";
             this.TipoProgramaDescripcion.ReadOnly = true;
+            // 
+            // lblTituloGrid
+            // 
+            this.lblTituloGrid.AutoSize = true;
+            this.lblTituloGrid.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloGrid.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloGrid.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblTituloGrid.Location = new System.Drawing.Point(239, 16);
+            this.lblTituloGrid.Name = "lblTituloGrid";
+            this.lblTituloGrid.Size = new System.Drawing.Size(223, 35);
+            this.lblTituloGrid.TabIndex = 9;
+            this.lblTituloGrid.Text = "Lista Programas";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.Location = new System.Drawing.Point(29, 261);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(177, 23);
+            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.Location = new System.Drawing.Point(29, 232);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(177, 23);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRegistrar.IconColor = System.Drawing.Color.Black;
+            this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistrar.Location = new System.Drawing.Point(29, 203);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(177, 23);
+            this.btnRegistrar.TabIndex = 6;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(29, 177);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(177, 20);
+            this.txtDescripcion.TabIndex = 5;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(29, 126);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(70, 20);
+            this.txtCodigo.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(24, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Descripción:";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.Black;
+            this.lblCodigo.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.Red;
+            this.lblCodigo.Location = new System.Drawing.Point(24, 98);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(86, 25);
+            this.lblCodigo.TabIndex = 2;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // lblTituloDetalle
+            // 
+            this.lblTituloDetalle.AutoSize = true;
+            this.lblTituloDetalle.BackColor = System.Drawing.Color.Black;
+            this.lblTituloDetalle.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloDetalle.ForeColor = System.Drawing.Color.Red;
+            this.lblTituloDetalle.Location = new System.Drawing.Point(23, 20);
+            this.lblTituloDetalle.Name = "lblTituloDetalle";
+            this.lblTituloDetalle.Size = new System.Drawing.Size(103, 35);
+            this.lblTituloDetalle.TabIndex = 1;
+            this.lblTituloDetalle.Text = "Detalle";
+            // 
+            // lblIzquierda
+            // 
+            this.lblIzquierda.BackColor = System.Drawing.Color.Black;
+            this.lblIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblIzquierda.Location = new System.Drawing.Point(0, 0);
+            this.lblIzquierda.Name = "lblIzquierda";
+            this.lblIzquierda.Size = new System.Drawing.Size(237, 417);
+            this.lblIzquierda.TabIndex = 0;
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.BtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLimpiar.Location = new System.Drawing.Point(155, 101);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(51, 23);
+            this.BtnLimpiar.TabIndex = 14;
+            this.BtnLimpiar.Text = "Limpiar";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmTiposProgramas
             // 
@@ -297,5 +312,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoProgramaId;
         private System.Windows.Forms.DataGridViewButtonColumn GridBtnSel;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoProgramaDescripcion;
+        private FontAwesome.Sharp.IconButton BtnLimpiar;
     }
 }

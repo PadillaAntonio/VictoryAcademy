@@ -23,3 +23,4 @@ E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresent
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmTiposTelefonos.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmTipoCompetencia.resources
 E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmTiposTorneos.resources
+E:\Victory Academy\Repos\Victory Academy\CapaPresentacion1\obj\Debug\CapaPresentacion1.FrmMonedas.resources

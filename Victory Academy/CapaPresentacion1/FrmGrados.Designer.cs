@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GridGrados = new System.Windows.Forms.DataGridView();
             this.GradoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrdBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -47,6 +47,7 @@
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridGrados)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,8 +92,8 @@
             // GradoDescripcion
             // 
             this.GradoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GradoDescripcion.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GradoDescripcion.DefaultCellStyle = dataGridViewCellStyle3;
             this.GradoDescripcion.DividerWidth = 2;
             this.GradoDescripcion.HeaderText = "Grado";
             this.GradoDescripcion.Name = "GradoDescripcion";
@@ -112,6 +113,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BtnLimpiar);
             this.panel1.Controls.Add(this.lblBusqueda);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Controls.Add(this.lblTituloGrid);
@@ -180,7 +182,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(24, 177);
+            this.txtDescripcion.Location = new System.Drawing.Point(29, 177);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(177, 20);
             this.txtDescripcion.TabIndex = 5;
@@ -199,11 +201,13 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(24, 126);
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(29, 126);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(86, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TabStop = false;
             // 
             // lblGradoId
             // 
@@ -231,7 +235,7 @@
             this.BtnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnEliminar.IconColor = System.Drawing.Color.Black;
             this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEliminar.Location = new System.Drawing.Point(24, 279);
+            this.BtnEliminar.Location = new System.Drawing.Point(29, 261);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(177, 23);
             this.BtnEliminar.TabIndex = 10;
@@ -244,7 +248,7 @@
             this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnEditar.IconColor = System.Drawing.Color.Black;
             this.BtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEditar.Location = new System.Drawing.Point(24, 250);
+            this.BtnEditar.Location = new System.Drawing.Point(29, 232);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(177, 23);
             this.BtnEditar.TabIndex = 9;
@@ -257,13 +261,26 @@
             this.BtnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnRegistrar.IconColor = System.Drawing.Color.Black;
             this.BtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRegistrar.Location = new System.Drawing.Point(24, 221);
+            this.BtnRegistrar.Location = new System.Drawing.Point(29, 203);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(177, 23);
             this.BtnRegistrar.TabIndex = 8;
             this.BtnRegistrar.Text = "Registrar";
             this.BtnRegistrar.UseVisualStyleBackColor = true;
             this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.BtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLimpiar.Location = new System.Drawing.Point(155, 101);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(51, 23);
+            this.BtnLimpiar.TabIndex = 15;
+            this.BtnLimpiar.Text = "Limpiar";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmGrados
             // 
@@ -301,5 +318,6 @@
         private System.Windows.Forms.Label lblTituloGrid;
         private System.Windows.Forms.Label lblBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;
+        private FontAwesome.Sharp.IconButton BtnLimpiar;
     }
 }

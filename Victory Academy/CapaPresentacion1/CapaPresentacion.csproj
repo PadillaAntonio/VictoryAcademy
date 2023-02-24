@@ -143,6 +143,9 @@
     <EmbeddedResource Include="FrmGrados.resx">
       <DependentUpon>FrmGrados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonedas.resx">
+      <DependentUpon>FrmMonedas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoCompetencia.resx">
       <DependentUpon>FrmTipoCompetencia.cs</DependentUpon>
     </EmbeddedResource>

@@ -47,15 +47,16 @@
             this.lblTituloGrid = new System.Windows.Forms.Label();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.GridTipoTorneo = new System.Windows.Forms.DataGridView();
-            this.TipoTorneoPuntos3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoTorneoPuntos2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoTorneoPuntos1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoTorneoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrdBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TipoTorneoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrdBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TipoTorneoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoTorneoPuntos1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoTorneoPuntos2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoTorneoPuntos3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipoTorneo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -278,21 +279,27 @@
             this.GridTipoTorneo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTipoTorneo_CellContentClick);
             this.GridTipoTorneo.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.GridTipoTorneo_CellPainting);
             // 
-            // TipoTorneoPuntos3
+            // TipoTorneoId
             // 
-            this.TipoTorneoPuntos3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.TipoTorneoPuntos3.HeaderText = "3er Lugar";
-            this.TipoTorneoPuntos3.Name = "TipoTorneoPuntos3";
-            this.TipoTorneoPuntos3.ReadOnly = true;
-            this.TipoTorneoPuntos3.Width = 77;
+            this.TipoTorneoId.HeaderText = "";
+            this.TipoTorneoId.Name = "TipoTorneoId";
+            this.TipoTorneoId.ReadOnly = true;
+            this.TipoTorneoId.Visible = false;
+            this.TipoTorneoId.Width = 19;
             // 
-            // TipoTorneoPuntos2
+            // GrdBtnSel
             // 
-            this.TipoTorneoPuntos2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.TipoTorneoPuntos2.HeaderText = "2do Lugar";
-            this.TipoTorneoPuntos2.Name = "TipoTorneoPuntos2";
-            this.TipoTorneoPuntos2.ReadOnly = true;
-            this.TipoTorneoPuntos2.Width = 80;
+            this.GrdBtnSel.HeaderText = "";
+            this.GrdBtnSel.Name = "GrdBtnSel";
+            this.GrdBtnSel.ReadOnly = true;
+            this.GrdBtnSel.Width = 20;
+            // 
+            // TipoTorneoDescripcion
+            // 
+            this.TipoTorneoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoTorneoDescripcion.HeaderText = "Descripción";
+            this.TipoTorneoDescripcion.Name = "TipoTorneoDescripcion";
+            this.TipoTorneoDescripcion.ReadOnly = true;
             // 
             // TipoTorneoPuntos1
             // 
@@ -303,27 +310,21 @@
             this.TipoTorneoPuntos1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.TipoTorneoPuntos1.Width = 77;
             // 
-            // TipoTorneoDescripcion
+            // TipoTorneoPuntos2
             // 
-            this.TipoTorneoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoTorneoDescripcion.HeaderText = "Descripción";
-            this.TipoTorneoDescripcion.Name = "TipoTorneoDescripcion";
-            this.TipoTorneoDescripcion.ReadOnly = true;
+            this.TipoTorneoPuntos2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.TipoTorneoPuntos2.HeaderText = "2do Lugar";
+            this.TipoTorneoPuntos2.Name = "TipoTorneoPuntos2";
+            this.TipoTorneoPuntos2.ReadOnly = true;
+            this.TipoTorneoPuntos2.Width = 80;
             // 
-            // GrdBtnSel
+            // TipoTorneoPuntos3
             // 
-            this.GrdBtnSel.HeaderText = "";
-            this.GrdBtnSel.Name = "GrdBtnSel";
-            this.GrdBtnSel.ReadOnly = true;
-            this.GrdBtnSel.Width = 20;
-            // 
-            // TipoTorneoId
-            // 
-            this.TipoTorneoId.HeaderText = "";
-            this.TipoTorneoId.Name = "TipoTorneoId";
-            this.TipoTorneoId.ReadOnly = true;
-            this.TipoTorneoId.Visible = false;
-            this.TipoTorneoId.Width = 19;
+            this.TipoTorneoPuntos3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.TipoTorneoPuntos3.HeaderText = "3er Lugar";
+            this.TipoTorneoPuntos3.Name = "TipoTorneoPuntos3";
+            this.TipoTorneoPuntos3.ReadOnly = true;
+            this.TipoTorneoPuntos3.Width = 77;
             // 
             // txtBusqueda
             // 
@@ -347,6 +348,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnLimpiar);
             this.panel1.Controls.Add(this.lblSinDatos);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Controls.Add(this.GridTipoTorneo);
@@ -374,6 +376,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 432);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.BtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLimpiar.Location = new System.Drawing.Point(159, 100);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(51, 23);
+            this.BtnLimpiar.TabIndex = 21;
+            this.BtnLimpiar.Text = "Limpiar";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmTiposTorneos
             // 
@@ -421,5 +436,6 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label lblSinDatos;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton BtnLimpiar;
     }
 }

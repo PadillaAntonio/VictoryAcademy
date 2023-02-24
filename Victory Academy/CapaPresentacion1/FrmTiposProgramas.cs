@@ -131,5 +131,10 @@ namespace CapaPresentacion1
         {
             Buscar();
         }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }
