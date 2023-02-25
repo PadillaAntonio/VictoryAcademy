@@ -31,7 +31,7 @@ namespace CapaPresentacion1
             {
                 MenuDefiniciones.Visible = false;
                 MenuAfiliacion.Visible = false; 
-                MenuFinanza.Visible= false;
+                MenuLimpiar.Visible= false;
             }
         }
 
@@ -41,20 +41,27 @@ namespace CapaPresentacion1
             {
                 MenuActivo.BackColor = Color.White;
             }
-            menu.BackColor = Color.Silver;
-            MenuActivo = menu;
+            if (menu != null)
+            {
+                menu.BackColor = Color.Silver;
+                MenuActivo = menu;
+            }
+
             if (FormularioActivo != null) 
             { 
                 FormularioActivo.Close();
             }
 
-            FormularioActivo = formulario;
-            formulario.TopLevel= false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
+            if (formulario != null)
+            {
+                FormularioActivo = formulario;
+                formulario.TopLevel= false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
 
-            Contenedor.Controls.Add(formulario);
-            formulario.Show();
+                Contenedor.Controls.Add(formulario);
+                formulario.Show();
+            }
 
         }
 
@@ -118,5 +125,11 @@ namespace CapaPresentacion1
         {
             AbrirFormulario((IconMenuItem)sender, new FrmVentas());
         }
+
+        private void MenuLimpiar_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(null, null);
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidad;
 using System.Drawing.Text;
+using CapaPresentacion1.Properties;
 
 namespace CapaPresentacion1
 {
@@ -44,5 +45,7 @@ namespace CapaPresentacion1
         {
             this.Close();
         }
+
+        
     }
 }
