@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
+using CapaPresentacion1.Utilidades;
 using FontAwesome.Sharp;
 
 namespace CapaPresentacion1

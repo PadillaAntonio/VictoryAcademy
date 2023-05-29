@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.Contenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuDefiniciones = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuGrados = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuTipoProgramas = new FontAwesome.Sharp.IconMenuItem();
@@ -49,9 +44,14 @@
             this.MenuTorneos = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuTorneos = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuPuntosPersonas = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuLimpiar = new FontAwesome.Sharp.IconMenuItem();
             this.MenuFinanzas = new FontAwesome.Sharp.IconMenuItem();
             this.SubMenuVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuLimpiar = new FontAwesome.Sharp.IconMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.Contenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,62 +70,6 @@
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.Size = new System.Drawing.Size(922, 110);
             this.menuTitulo.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(922, 71);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Black;
-            this.lblUsuario.CausesValidation = false;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.Red;
-            this.lblUsuario.Location = new System.Drawing.Point(768, 23);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblUser
-            // 
-            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.Color.Black;
-            this.lblUser.CausesValidation = false;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.Red;
-            this.lblUser.Location = new System.Drawing.Point(831, 23);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(79, 20);
-            this.lblUser.TabIndex = 5;
-            this.lblUser.Text = "lblUsuario";
-            // 
-            // Contenedor
-            // 
-            this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(0, 181);
-            this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(922, 404);
-            this.Contenedor.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::CapaPresentacion1.Properties.Resources.Logo_Inicio;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 51);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // MenuDefiniciones
             // 
@@ -240,7 +184,7 @@
             this.SubMenuPersonas.IconColor = System.Drawing.Color.Black;
             this.SubMenuPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubMenuPersonas.Name = "SubMenuPersonas";
-            this.SubMenuPersonas.Size = new System.Drawing.Size(180, 24);
+            this.SubMenuPersonas.Size = new System.Drawing.Size(139, 24);
             this.SubMenuPersonas.Text = "Personas";
             this.SubMenuPersonas.Click += new System.EventHandler(this.SubMenuPersonas_Click);
             // 
@@ -250,7 +194,7 @@
             this.SubMenuUsuarios.IconColor = System.Drawing.Color.Black;
             this.SubMenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubMenuUsuarios.Name = "SubMenuUsuarios";
-            this.SubMenuUsuarios.Size = new System.Drawing.Size(180, 24);
+            this.SubMenuUsuarios.Size = new System.Drawing.Size(139, 24);
             this.SubMenuUsuarios.Text = "Usuarios";
             this.SubMenuUsuarios.Click += new System.EventHandler(this.SubMenuUsuarios_Click);
             // 
@@ -290,20 +234,6 @@
             this.SubMenuPuntosPersonas.Text = "Puntos x Persona";
             this.SubMenuPuntosPersonas.Click += new System.EventHandler(this.SubMenuPuntosPersonas_Click);
             // 
-            // MenuLimpiar
-            // 
-            this.MenuLimpiar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.MenuLimpiar.IconColor = System.Drawing.Color.DarkRed;
-            this.MenuLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuLimpiar.IconSize = 60;
-            this.MenuLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuLimpiar.Name = "MenuLimpiar";
-            this.MenuLimpiar.Size = new System.Drawing.Size(73, 106);
-            this.MenuLimpiar.Text = "Limpiar";
-            this.MenuLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.MenuLimpiar.Click += new System.EventHandler(this.MenuLimpiar_Click);
-            // 
             // MenuFinanzas
             // 
             this.MenuFinanzas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -325,13 +255,83 @@
             this.SubMenuVentas.IconColor = System.Drawing.Color.Black;
             this.SubMenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubMenuVentas.Name = "SubMenuVentas";
-            this.SubMenuVentas.Size = new System.Drawing.Size(180, 24);
+            this.SubMenuVentas.Size = new System.Drawing.Size(124, 24);
             this.SubMenuVentas.Text = "Ventas";
+            // 
+            // MenuLimpiar
+            // 
+            this.MenuLimpiar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.MenuLimpiar.IconColor = System.Drawing.Color.DarkRed;
+            this.MenuLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuLimpiar.IconSize = 60;
+            this.MenuLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuLimpiar.Name = "MenuLimpiar";
+            this.MenuLimpiar.Size = new System.Drawing.Size(73, 106);
+            this.MenuLimpiar.Text = "Limpiar";
+            this.MenuLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuLimpiar.Click += new System.EventHandler(this.MenuLimpiar_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(922, 71);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Black;
+            this.lblUsuario.CausesValidation = false;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblUsuario.Location = new System.Drawing.Point(768, 23);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // lblUser
+            // 
+            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Black;
+            this.lblUser.CausesValidation = false;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Red;
+            this.lblUser.Location = new System.Drawing.Point(831, 23);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(79, 20);
+            this.lblUser.TabIndex = 5;
+            this.lblUser.Text = "lblUsuario";
+            // 
+            // Contenedor
+            // 
+            this.Contenedor.Location = new System.Drawing.Point(0, 181);
+            this.Contenedor.Name = "Contenedor";
+            this.Contenedor.Size = new System.Drawing.Size(922, 404);
+            this.Contenedor.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Image = global::CapaPresentacion1.Properties.Resources.Logo_Inicio;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 51);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(922, 585);
             this.Controls.Add(this.pictureBox1);

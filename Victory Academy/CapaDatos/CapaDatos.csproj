@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CD_Conceptos.cs" />
     <Compile Include="CD_Grados.cs" />
     <Compile Include="CD_Moneda.cs" />
+    <Compile Include="CD_Precio.cs" />
     <Compile Include="CD_TipoCompetencia.cs" />
     <Compile Include="CD_TipoPrograma.cs" />
     <Compile Include="CD_TiposTelefonos.cs" />

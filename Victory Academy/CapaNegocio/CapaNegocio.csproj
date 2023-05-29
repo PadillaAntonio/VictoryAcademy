@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Concepto.cs" />
     <Compile Include="CN_Grado.cs" />
     <Compile Include="CN_Moneda.cs" />
     <Compile Include="CN_TipoCompetencia.cs" />

@@ -89,21 +89,35 @@ namespace CapaPresentacion1
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            Mensaje = objTipoCompetencia.Insertar(txtDescripcion.Text, Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor));
-            MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Limpiar();
-            FrmTipoCompetencia_Load(sender, EventArgs.Empty);
+            if (Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor) == 0)
+            {
+                MessageBox.Show("Debe seleccionar una disciplina", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Mensaje = objTipoCompetencia.Insertar(txtDescripcion.Text, Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor));
+                MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Limpiar();
+                FrmTipoCompetencia_Load(sender, EventArgs.Empty);
+            }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Se va a modificar el registro. \n¿Desea continuar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (res == DialogResult.Yes)
+            if (Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor) == 0)
             {
-                Mensaje = objTipoCompetencia.Actualizar(Convert.ToInt32(txtCodigo.Text), txtDescripcion.Text, Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor));
-                MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Limpiar();
-                FrmTipoCompetencia_Load(sender, EventArgs.Empty);
+                MessageBox.Show("Debe seleccionar una disciplina", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Se va a modificar el registro. \n¿Desea continuar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Yes)
+                {
+                    Mensaje = objTipoCompetencia.Actualizar(Convert.ToInt32(txtCodigo.Text), txtDescripcion.Text, Convert.ToInt32(((OpcionCombo)CboDisciplina.SelectedItem).Valor));
+                    MessageBox.Show(Mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Limpiar();
+                    FrmTipoCompetencia_Load(sender, EventArgs.Empty);
+                }
             }
         }
 

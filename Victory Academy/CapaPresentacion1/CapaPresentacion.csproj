@@ -140,6 +140,10 @@
       <DependentUpon>FrmTiposProgramas.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\OpcionCombo.cs" />
+    <Compile Include="Utilidades\ReferenciaConcepto.cs" />
+    <EmbeddedResource Include="FrmConceptos.resx">
+      <DependentUpon>FrmConceptos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGrados.resx">
       <DependentUpon>FrmGrados.cs</DependentUpon>
     </EmbeddedResource>
