@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblBusqueda = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblTituloDetalle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipoCompetencia)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 390);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.BtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLimpiar.Location = new System.Drawing.Point(155, 101);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(51, 23);
+            this.BtnLimpiar.TabIndex = 17;
+            this.BtnLimpiar.Text = "Limpiar";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // cboBusqueda
             // 
@@ -138,7 +151,7 @@
             this.lblSinDatos.Enabled = false;
             this.lblSinDatos.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinDatos.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblSinDatos.Location = new System.Drawing.Point(407, 177);
+            this.lblSinDatos.Location = new System.Drawing.Point(428, 206);
             this.lblSinDatos.Name = "lblSinDatos";
             this.lblSinDatos.Size = new System.Drawing.Size(174, 25);
             this.lblSinDatos.TabIndex = 12;
@@ -181,8 +194,8 @@
             // TipoCompetenciaDescripcion
             // 
             this.TipoCompetenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoCompetenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoCompetenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle1;
             this.TipoCompetenciaDescripcion.HeaderText = "Descripción";
             this.TipoCompetenciaDescripcion.Name = "TipoCompetenciaDescripcion";
             this.TipoCompetenciaDescripcion.ReadOnly = true;
@@ -197,8 +210,8 @@
             // TipoCompetenciaDisciplinaDescripcion
             // 
             this.TipoCompetenciaDisciplinaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoCompetenciaDisciplinaDescripcion.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoCompetenciaDisciplinaDescripcion.DefaultCellStyle = dataGridViewCellStyle2;
             this.TipoCompetenciaDisciplinaDescripcion.HeaderText = "Disciplina";
             this.TipoCompetenciaDisciplinaDescripcion.Name = "TipoCompetenciaDisciplinaDescripcion";
             this.TipoCompetenciaDisciplinaDescripcion.ReadOnly = true;
@@ -336,19 +349,6 @@
             this.label1.Size = new System.Drawing.Size(237, 390);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // BtnLimpiar
-            // 
-            this.BtnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnLimpiar.IconColor = System.Drawing.Color.Black;
-            this.BtnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnLimpiar.Location = new System.Drawing.Point(155, 101);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(51, 23);
-            this.BtnLimpiar.TabIndex = 17;
-            this.BtnLimpiar.Text = "Limpiar";
-            this.BtnLimpiar.UseVisualStyleBackColor = true;
-            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmTipoCompetencia
             // 

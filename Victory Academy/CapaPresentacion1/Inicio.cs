@@ -61,6 +61,7 @@ namespace CapaPresentacion1
                 formulario.Dock = DockStyle.Fill;
 
                 Contenedor.Controls.Add(formulario);
+                Contenedor.Height = formulario.Height;
                 formulario.Show();
             }
 

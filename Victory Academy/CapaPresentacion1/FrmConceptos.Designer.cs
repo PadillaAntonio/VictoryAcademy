@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -113,11 +113,12 @@
             this.lblSinDatos.BackColor = System.Drawing.Color.Transparent;
             this.lblSinDatos.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinDatos.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblSinDatos.Location = new System.Drawing.Point(402, 177);
+            this.lblSinDatos.Location = new System.Drawing.Point(409, 195);
             this.lblSinDatos.Name = "lblSinDatos";
             this.lblSinDatos.Size = new System.Drawing.Size(174, 25);
             this.lblSinDatos.TabIndex = 22;
             this.lblSinDatos.Text = "NO HAY DATOS";
+            this.lblSinDatos.Click += new System.EventHandler(this.lblSinDatos_Click);
             // 
             // txtBusqueda
             // 
@@ -161,6 +162,7 @@
             // 
             // cboMoneda
             // 
+            this.cboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMoneda.FormattingEnabled = true;
             this.cboMoneda.Location = new System.Drawing.Point(29, 332);
             this.cboMoneda.Name = "cboMoneda";
@@ -207,8 +209,8 @@
             // PrecioFecha
             // 
             this.PrecioFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioFecha.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioFecha.DefaultCellStyle = dataGridViewCellStyle11;
             this.PrecioFecha.HeaderText = "Fecha";
             this.PrecioFecha.Name = "PrecioFecha";
             this.PrecioFecha.ReadOnly = true;
@@ -223,8 +225,8 @@
             // PrecioMonedaSigno
             // 
             this.PrecioMonedaSigno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioMonedaSigno.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioMonedaSigno.DefaultCellStyle = dataGridViewCellStyle12;
             this.PrecioMonedaSigno.HeaderText = "Signo";
             this.PrecioMonedaSigno.Name = "PrecioMonedaSigno";
             this.PrecioMonedaSigno.ReadOnly = true;
@@ -232,8 +234,8 @@
             // PrecioValor
             // 
             this.PrecioValor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioValor.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioValor.DefaultCellStyle = dataGridViewCellStyle13;
             this.PrecioValor.HeaderText = "Valor";
             this.PrecioValor.Name = "PrecioValor";
             this.PrecioValor.ReadOnly = true;
@@ -274,8 +276,8 @@
             // ConceptoDescripcion
             // 
             this.ConceptoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConceptoDescripcion.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConceptoDescripcion.DefaultCellStyle = dataGridViewCellStyle14;
             this.ConceptoDescripcion.HeaderText = "Descripción";
             this.ConceptoDescripcion.Name = "ConceptoDescripcion";
             this.ConceptoDescripcion.ReadOnly = true;
@@ -297,8 +299,8 @@
             // ConceptoReferenciaDescripcion
             // 
             this.ConceptoReferenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConceptoReferenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConceptoReferenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle15;
             this.ConceptoReferenciaDescripcion.HeaderText = "Referencia";
             this.ConceptoReferenciaDescripcion.Name = "ConceptoReferenciaDescripcion";
             this.ConceptoReferenciaDescripcion.ReadOnly = true;
@@ -353,6 +355,7 @@
             // 
             // cboReferencia
             // 
+            this.cboReferencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboReferencia.FormattingEnabled = true;
             this.cboReferencia.Location = new System.Drawing.Point(29, 280);
             this.cboReferencia.Name = "cboReferencia";

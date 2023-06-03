@@ -23,6 +23,7 @@ namespace CapaPresentacion1
         public FrmConceptos()
         {
             InitializeComponent();
+            // Tipo de concepto
             cboTipo.Items.Clear();
             cboTipo.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Seleccionar" });
             cboTipo.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Tipo de programa" });
@@ -35,6 +36,13 @@ namespace CapaPresentacion1
             cboTipo.ValueMember = "Valor";
             cboTipo.SelectedIndex = 0;
 
+            // Referencia
+            cboReferencia.Items.Clear();
+            cboReferencia.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Corresponde"});
+            cboReferencia.DisplayMember = "Texto";
+            cboReferencia.ValueMember = "Valor";
+            cboReferencia.SelectedIndex = 0;
+
             //Monedas
             monedas = obj_moneda.Listar();
             cboMoneda.Items.Clear();
@@ -43,9 +51,9 @@ namespace CapaPresentacion1
             {
                 cboMoneda.Items.Add(new OpcionCombo() { Valor = moneda.Id, Texto = moneda.Signo });
             }
-            cboTipo.DisplayMember = "Texto";
-            cboTipo.ValueMember = "Valor";
-            cboTipo.SelectedIndex = 0;
+            cboMoneda.DisplayMember = "Texto";
+            cboMoneda.ValueMember = "Valor";
+            cboMoneda.SelectedIndex = 0;
         }
 
         private void FrmConceptos_Load(object sender, EventArgs e)
@@ -98,15 +106,18 @@ namespace CapaPresentacion1
             }
             else
             {
+                txtDescripcion.Enabled = true;
+                txtDescripcion.Text = string.Empty;
                 cboReferencia.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No corresponde" });
             }
             cboReferencia.DisplayMember = "Texto";
             cboReferencia.ValueMember = "Valor";
+            cboReferencia.SelectedIndex = 0;
         }
 
         private void cboReferencia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(((OpcionCombo)cboTipo.SelectedItem).Valor) > 0)
+            if (cboTipo.SelectedIndex == 1 || cboTipo.SelectedIndex == 2)//(Convert.ToInt32(((OpcionCombo)cboTipo.SelectedIndex).Valor) > 0)
             {
                 txtDescripcion.Text = Convert.ToString(((OpcionCombo)cboReferencia.SelectedItem).Texto);
             }
@@ -114,6 +125,11 @@ namespace CapaPresentacion1
             {
                 txtDescripcion.Text = string.Empty;
             }    
+        }
+
+        private void lblSinDatos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
