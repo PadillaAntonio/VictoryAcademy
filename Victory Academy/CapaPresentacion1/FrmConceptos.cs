@@ -54,6 +54,9 @@ namespace CapaPresentacion1
             cboMoneda.DisplayMember = "Texto";
             cboMoneda.ValueMember = "Valor";
             cboMoneda.SelectedIndex = 0;
+
+            // Check Precio
+            panelPrecio.Visible = false;
         }
 
         private void FrmConceptos_Load(object sender, EventArgs e)
@@ -131,5 +134,75 @@ namespace CapaPresentacion1
         {
 
         }
+
+        private void chkPrecio_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblMoneda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkPrecio_Click(object sender, EventArgs e)
+        {
+            MostrarPrecio(0);
+        }
+
+        private void MostrarPrecio(int bandera)
+        {
+            if (chkPrecio.Checked == true)
+            {
+                panelPrecio.Visible = true;
+            }
+            else
+            {
+                panelPrecio.Visible = false;
+            }
+
+            if (bandera == 1) // Quiere decir que hay datos en los txt del panel
+            {
+
+            }
+            else
+            {
+                cboMoneda.SelectedIndex = 0;
+                txtPrecio.Text = string.Empty;
+            }
+        }
+
+        private void GridConceptos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 1)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var h = Properties.Resources.Check16.Height;
+                var w = Properties.Resources.Check16.Width;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(Properties.Resources.Check16, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        /* Esto en principio no sería necesario
+        private void GridPrecios_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 1)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var h = Properties.Resources.Check16.Height;
+                var w = Properties.Resources.Check16.Width;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(Properties.Resources.Check16, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }*/
     }
 }

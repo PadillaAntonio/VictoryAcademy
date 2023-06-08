@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnLimpiar = new FontAwesome.Sharp.IconButton();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
@@ -38,11 +38,6 @@
             this.lblBusquedaDisciplina = new System.Windows.Forms.Label();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.GridTipoCompetencia = new System.Windows.Forms.DataGridView();
-            this.TipoCompetenciaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrdBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TipoCompetenciaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoCompetenciaDisciplinaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoCompetenciaDisciplinaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTituloGrid = new System.Windows.Forms.Label();
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
@@ -55,6 +50,11 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblTituloDetalle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.TipoCompetenciaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TipoCompetenciaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoCompetenciaDisciplinaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoCompetenciaDisciplinaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridTipoCompetencia)).BeginInit();
             this.SuspendLayout();
@@ -167,7 +167,7 @@
             this.GridTipoCompetencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridTipoCompetencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoCompetenciaId,
-            this.GrdBtnSel,
+            this.GridBtnSel,
             this.TipoCompetenciaDescripcion,
             this.TipoCompetenciaDisciplinaId,
             this.TipoCompetenciaDisciplinaDescripcion});
@@ -176,45 +176,8 @@
             this.GridTipoCompetencia.ReadOnly = true;
             this.GridTipoCompetencia.Size = new System.Drawing.Size(545, 320);
             this.GridTipoCompetencia.TabIndex = 11;
-            // 
-            // TipoCompetenciaId
-            // 
-            this.TipoCompetenciaId.HeaderText = "";
-            this.TipoCompetenciaId.Name = "TipoCompetenciaId";
-            this.TipoCompetenciaId.ReadOnly = true;
-            this.TipoCompetenciaId.Visible = false;
-            // 
-            // GrdBtnSel
-            // 
-            this.GrdBtnSel.HeaderText = "";
-            this.GrdBtnSel.Name = "GrdBtnSel";
-            this.GrdBtnSel.ReadOnly = true;
-            this.GrdBtnSel.Width = 20;
-            // 
-            // TipoCompetenciaDescripcion
-            // 
-            this.TipoCompetenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoCompetenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TipoCompetenciaDescripcion.HeaderText = "Descripción";
-            this.TipoCompetenciaDescripcion.Name = "TipoCompetenciaDescripcion";
-            this.TipoCompetenciaDescripcion.ReadOnly = true;
-            // 
-            // TipoCompetenciaDisciplinaId
-            // 
-            this.TipoCompetenciaDisciplinaId.HeaderText = "";
-            this.TipoCompetenciaDisciplinaId.Name = "TipoCompetenciaDisciplinaId";
-            this.TipoCompetenciaDisciplinaId.ReadOnly = true;
-            this.TipoCompetenciaDisciplinaId.Visible = false;
-            // 
-            // TipoCompetenciaDisciplinaDescripcion
-            // 
-            this.TipoCompetenciaDisciplinaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoCompetenciaDisciplinaDescripcion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TipoCompetenciaDisciplinaDescripcion.HeaderText = "Disciplina";
-            this.TipoCompetenciaDisciplinaDescripcion.Name = "TipoCompetenciaDisciplinaDescripcion";
-            this.TipoCompetenciaDisciplinaDescripcion.ReadOnly = true;
+            this.GridTipoCompetencia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTipoCompetencia_CellContentClick);
+            this.GridTipoCompetencia.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.GridTipoCompetencia_CellPainting);
             // 
             // lblTituloGrid
             // 
@@ -269,6 +232,7 @@
             // 
             // CboDisciplina
             // 
+            this.CboDisciplina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboDisciplina.FormattingEnabled = true;
             this.CboDisciplina.Location = new System.Drawing.Point(29, 228);
             this.CboDisciplina.MaxDropDownItems = 2;
@@ -350,6 +314,45 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+            // TipoCompetenciaId
+            // 
+            this.TipoCompetenciaId.HeaderText = "";
+            this.TipoCompetenciaId.Name = "TipoCompetenciaId";
+            this.TipoCompetenciaId.ReadOnly = true;
+            this.TipoCompetenciaId.Visible = false;
+            // 
+            // GridBtnSel
+            // 
+            this.GridBtnSel.HeaderText = "";
+            this.GridBtnSel.Name = "GridBtnSel";
+            this.GridBtnSel.ReadOnly = true;
+            this.GridBtnSel.Width = 20;
+            // 
+            // TipoCompetenciaDescripcion
+            // 
+            this.TipoCompetenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoCompetenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TipoCompetenciaDescripcion.HeaderText = "Descripción";
+            this.TipoCompetenciaDescripcion.Name = "TipoCompetenciaDescripcion";
+            this.TipoCompetenciaDescripcion.ReadOnly = true;
+            // 
+            // TipoCompetenciaDisciplinaId
+            // 
+            this.TipoCompetenciaDisciplinaId.HeaderText = "";
+            this.TipoCompetenciaDisciplinaId.Name = "TipoCompetenciaDisciplinaId";
+            this.TipoCompetenciaDisciplinaId.ReadOnly = true;
+            this.TipoCompetenciaDisciplinaId.Visible = false;
+            // 
+            // TipoCompetenciaDisciplinaDescripcion
+            // 
+            this.TipoCompetenciaDisciplinaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoCompetenciaDisciplinaDescripcion.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TipoCompetenciaDisciplinaDescripcion.HeaderText = "Disciplina";
+            this.TipoCompetenciaDisciplinaDescripcion.Name = "TipoCompetenciaDisciplinaDescripcion";
+            this.TipoCompetenciaDisciplinaDescripcion.ReadOnly = true;
+            // 
             // FrmTipoCompetencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,16 +385,16 @@
         private System.Windows.Forms.Label lblBusquedaDisciplina;
         private System.Windows.Forms.Label lblSinDatos;
         private System.Windows.Forms.DataGridView GridTipoCompetencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaId;
-        private System.Windows.Forms.DataGridViewButtonColumn GrdBtnSel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDisciplinaId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDisciplinaDescripcion;
         private System.Windows.Forms.Label lblTituloGrid;
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnEditar;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cboBusqueda;
         private FontAwesome.Sharp.IconButton BtnLimpiar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaId;
+        private System.Windows.Forms.DataGridViewButtonColumn GridBtnSel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDisciplinaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCompetenciaDisciplinaDescripcion;
     }
 }

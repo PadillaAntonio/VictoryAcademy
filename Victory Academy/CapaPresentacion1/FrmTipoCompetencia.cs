@@ -29,18 +29,29 @@ namespace CapaPresentacion1
             cboBusqueda.DisplayMember = "Texto";
             cboBusqueda.ValueMember = "Valor";
             cboBusqueda.SelectedIndex = 0;
-        }
 
-        private void FrmTipoCompetencia_Load(object sender, EventArgs e)
-        {
             CboDisciplina.Items.Clear();
+            CboDisciplina.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Seleccionar" });
             CboDisciplina.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Combate" });
             CboDisciplina.Items.Add(new OpcionCombo() { Valor = 2, Texto = "Formas" });
             CboDisciplina.Items.Add(new OpcionCombo() { Valor = 3, Texto = "Armas" });
             CboDisciplina.DisplayMember = "Texto";
             CboDisciplina.ValueMember = "Valor";
             CboDisciplina.SelectedIndex = 0;
+        }
 
+        private void FrmTipoCompetencia_Load(object sender, EventArgs e)
+        {
+            /*
+            CboDisciplina.Items.Clear();
+            CboDisciplina.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Seleccionar" });
+            CboDisciplina.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Combate" });
+            CboDisciplina.Items.Add(new OpcionCombo() { Valor = 2, Texto = "Formas" });
+            CboDisciplina.Items.Add(new OpcionCombo() { Valor = 3, Texto = "Armas" });
+            CboDisciplina.DisplayMember = "Texto";
+            CboDisciplina.ValueMember = "Valor";
+            CboDisciplina.SelectedIndex = 0;
+            */
             GridTipoCompetencia.Rows.Clear();
             TiposCompetencias = objTipoCompetencia.Listar();
             if (TiposCompetencias.Count != 0)
@@ -174,6 +185,43 @@ namespace CapaPresentacion1
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void GridTipoCompetencia_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 1)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var h = Properties.Resources.Check16.Height;
+                var w = Properties.Resources.Check16.Width;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(Properties.Resources.Check16, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void GridTipoCompetencia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GridTipoCompetencia.Columns[e.ColumnIndex].Name == "GridBtnSel")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtCodigo.Text = GridTipoCompetencia.Rows[indice].Cells["TipoCompetenciaId"].Value.ToString();
+                    txtDescripcion.Text = GridTipoCompetencia.Rows[indice].Cells["TipoCompetenciaDescripcion"].Value.ToString();
+                    foreach (OpcionCombo op in CboDisciplina.Items)
+                    {
+                        if (Convert.ToInt32(op.Valor) == Convert.ToInt32(GridTipoCompetencia.Rows[indice].Cells["TipoCompetenciaDisciplinaId"].Value))
+                        {
+                            int indiceOp = CboDisciplina.Items.IndexOf(op);
+                            CboDisciplina.SelectedIndex = indiceOp;
+                        }
+                    }
+                }
+            }
         }
     }
 }

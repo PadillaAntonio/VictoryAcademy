@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSinDatos = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -48,12 +48,6 @@
             this.PrecioMonedaSigno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridConceptos = new System.Windows.Forms.DataGridView();
-            this.ConceptoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnGrdSel = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ConceptoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConceptoTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConceptoReferenciaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConceptoReferenciaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTituloGrid = new System.Windows.Forms.Label();
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
@@ -68,20 +62,27 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblTituloDetalle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkPrecio = new System.Windows.Forms.CheckBox();
+            this.panelPrecio = new System.Windows.Forms.Panel();
+            this.ConceptoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridBtnSel = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ConceptoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoReferenciaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoReferenciaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridPrecios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridConceptos)).BeginInit();
+            this.panelPrecio.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelPrecio);
+            this.panel1.Controls.Add(this.chkPrecio);
             this.panel1.Controls.Add(this.lblSinDatos);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Controls.Add(this.lblBusqueda);
-            this.panel1.Controls.Add(this.txtPrecio);
-            this.panel1.Controls.Add(this.lblValor);
-            this.panel1.Controls.Add(this.cboMoneda);
-            this.panel1.Controls.Add(this.lblMoneda);
             this.panel1.Controls.Add(this.GridPrecios);
             this.panel1.Controls.Add(this.GridConceptos);
             this.panel1.Controls.Add(this.lblTituloGrid);
@@ -101,7 +102,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 500);
+            this.panel1.Size = new System.Drawing.Size(760, 536);
             this.panel1.TabIndex = 0;
             // 
             // lblSinDatos
@@ -143,7 +144,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(29, 381);
+            this.txtPrecio.Location = new System.Drawing.Point(7, 85);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(86, 20);
             this.txtPrecio.TabIndex = 19;
@@ -154,7 +155,7 @@
             this.lblValor.BackColor = System.Drawing.Color.Black;
             this.lblValor.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValor.ForeColor = System.Drawing.Color.Red;
-            this.lblValor.Location = new System.Drawing.Point(24, 353);
+            this.lblValor.Location = new System.Drawing.Point(2, 57);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(79, 25);
             this.lblValor.TabIndex = 18;
@@ -164,7 +165,7 @@
             // 
             this.cboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMoneda.FormattingEnabled = true;
-            this.cboMoneda.Location = new System.Drawing.Point(29, 332);
+            this.cboMoneda.Location = new System.Drawing.Point(7, 33);
             this.cboMoneda.Name = "cboMoneda";
             this.cboMoneda.Size = new System.Drawing.Size(121, 21);
             this.cboMoneda.TabIndex = 17;
@@ -175,11 +176,12 @@
             this.lblMoneda.BackColor = System.Drawing.Color.Black;
             this.lblMoneda.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoneda.ForeColor = System.Drawing.Color.Red;
-            this.lblMoneda.Location = new System.Drawing.Point(24, 304);
+            this.lblMoneda.Location = new System.Drawing.Point(2, 3);
             this.lblMoneda.Name = "lblMoneda";
             this.lblMoneda.Size = new System.Drawing.Size(95, 25);
             this.lblMoneda.TabIndex = 16;
             this.lblMoneda.Text = "Moneda:";
+            this.lblMoneda.Click += new System.EventHandler(this.lblMoneda_Click);
             // 
             // GridPrecios
             // 
@@ -193,7 +195,7 @@
             this.PrecioMonedaId,
             this.PrecioMonedaSigno,
             this.PrecioValor});
-            this.GridPrecios.Location = new System.Drawing.Point(243, 362);
+            this.GridPrecios.Location = new System.Drawing.Point(243, 398);
             this.GridPrecios.Name = "GridPrecios";
             this.GridPrecios.ReadOnly = true;
             this.GridPrecios.Size = new System.Drawing.Size(505, 126);
@@ -209,8 +211,8 @@
             // PrecioFecha
             // 
             this.PrecioFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioFecha.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioFecha.DefaultCellStyle = dataGridViewCellStyle1;
             this.PrecioFecha.HeaderText = "Fecha";
             this.PrecioFecha.Name = "PrecioFecha";
             this.PrecioFecha.ReadOnly = true;
@@ -225,8 +227,8 @@
             // PrecioMonedaSigno
             // 
             this.PrecioMonedaSigno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioMonedaSigno.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioMonedaSigno.DefaultCellStyle = dataGridViewCellStyle2;
             this.PrecioMonedaSigno.HeaderText = "Signo";
             this.PrecioMonedaSigno.Name = "PrecioMonedaSigno";
             this.PrecioMonedaSigno.ReadOnly = true;
@@ -234,8 +236,8 @@
             // PrecioValor
             // 
             this.PrecioValor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioValor.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioValor.DefaultCellStyle = dataGridViewCellStyle3;
             this.PrecioValor.HeaderText = "Valor";
             this.PrecioValor.Name = "PrecioValor";
             this.PrecioValor.ReadOnly = true;
@@ -248,7 +250,7 @@
             this.GridConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridConceptos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ConceptoId,
-            this.BtnGrdSel,
+            this.GridBtnSel,
             this.ConceptoDescripcion,
             this.ConceptoTipo,
             this.ConceptoReferenciaId,
@@ -256,54 +258,9 @@
             this.GridConceptos.Location = new System.Drawing.Point(244, 59);
             this.GridConceptos.Name = "GridConceptos";
             this.GridConceptos.ReadOnly = true;
-            this.GridConceptos.Size = new System.Drawing.Size(504, 297);
+            this.GridConceptos.Size = new System.Drawing.Size(504, 333);
             this.GridConceptos.TabIndex = 14;
-            // 
-            // ConceptoId
-            // 
-            this.ConceptoId.HeaderText = "";
-            this.ConceptoId.Name = "ConceptoId";
-            this.ConceptoId.ReadOnly = true;
-            this.ConceptoId.Visible = false;
-            // 
-            // BtnGrdSel
-            // 
-            this.BtnGrdSel.HeaderText = "";
-            this.BtnGrdSel.Name = "BtnGrdSel";
-            this.BtnGrdSel.ReadOnly = true;
-            this.BtnGrdSel.Width = 20;
-            // 
-            // ConceptoDescripcion
-            // 
-            this.ConceptoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConceptoDescripcion.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ConceptoDescripcion.HeaderText = "Descripción";
-            this.ConceptoDescripcion.Name = "ConceptoDescripcion";
-            this.ConceptoDescripcion.ReadOnly = true;
-            // 
-            // ConceptoTipo
-            // 
-            this.ConceptoTipo.HeaderText = "";
-            this.ConceptoTipo.Name = "ConceptoTipo";
-            this.ConceptoTipo.ReadOnly = true;
-            this.ConceptoTipo.Visible = false;
-            // 
-            // ConceptoReferenciaId
-            // 
-            this.ConceptoReferenciaId.HeaderText = "";
-            this.ConceptoReferenciaId.Name = "ConceptoReferenciaId";
-            this.ConceptoReferenciaId.ReadOnly = true;
-            this.ConceptoReferenciaId.Visible = false;
-            // 
-            // ConceptoReferenciaDescripcion
-            // 
-            this.ConceptoReferenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConceptoReferenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle15;
-            this.ConceptoReferenciaDescripcion.HeaderText = "Referencia";
-            this.ConceptoReferenciaDescripcion.Name = "ConceptoReferenciaDescripcion";
-            this.ConceptoReferenciaDescripcion.ReadOnly = true;
+            this.GridConceptos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.GridConceptos_CellPainting);
             // 
             // lblTituloGrid
             // 
@@ -322,7 +279,7 @@
             this.BtnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnEliminar.IconColor = System.Drawing.Color.Black;
             this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEliminar.Location = new System.Drawing.Point(29, 465);
+            this.BtnEliminar.Location = new System.Drawing.Point(29, 503);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(177, 23);
             this.BtnEliminar.TabIndex = 12;
@@ -334,7 +291,7 @@
             this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnEditar.IconColor = System.Drawing.Color.Black;
             this.BtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEditar.Location = new System.Drawing.Point(29, 436);
+            this.BtnEditar.Location = new System.Drawing.Point(29, 474);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(177, 23);
             this.BtnEditar.TabIndex = 11;
@@ -346,7 +303,7 @@
             this.BtnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnRegistrar.IconColor = System.Drawing.Color.Black;
             this.BtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRegistrar.Location = new System.Drawing.Point(29, 407);
+            this.BtnRegistrar.Location = new System.Drawing.Point(29, 445);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(177, 23);
             this.BtnRegistrar.TabIndex = 10;
@@ -371,9 +328,9 @@
             this.lblReferencia.ForeColor = System.Drawing.Color.Red;
             this.lblReferencia.Location = new System.Drawing.Point(24, 252);
             this.lblReferencia.Name = "lblReferencia";
-            this.lblReferencia.Size = new System.Drawing.Size(100, 25);
+            this.lblReferencia.Size = new System.Drawing.Size(119, 25);
             this.lblReferencia.TabIndex = 8;
-            this.lblReferencia.Text = "Refencia:";
+            this.lblReferencia.Text = "Referencia:";
             // 
             // cboTipo
             // 
@@ -455,14 +412,87 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 500);
+            this.label1.Size = new System.Drawing.Size(237, 536);
             this.label1.TabIndex = 0;
+            // 
+            // chkPrecio
+            // 
+            this.chkPrecio.AutoSize = true;
+            this.chkPrecio.BackColor = System.Drawing.Color.Black;
+            this.chkPrecio.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPrecio.ForeColor = System.Drawing.Color.Red;
+            this.chkPrecio.Location = new System.Drawing.Point(29, 307);
+            this.chkPrecio.Name = "chkPrecio";
+            this.chkPrecio.Size = new System.Drawing.Size(91, 29);
+            this.chkPrecio.TabIndex = 23;
+            this.chkPrecio.Text = "Precio";
+            this.chkPrecio.UseVisualStyleBackColor = false;
+            this.chkPrecio.CheckedChanged += new System.EventHandler(this.chkPrecio_CheckedChanged);
+            this.chkPrecio.Click += new System.EventHandler(this.chkPrecio_Click);
+            // 
+            // panelPrecio
+            // 
+            this.panelPrecio.BackColor = System.Drawing.Color.Black;
+            this.panelPrecio.Controls.Add(this.lblMoneda);
+            this.panelPrecio.Controls.Add(this.cboMoneda);
+            this.panelPrecio.Controls.Add(this.lblValor);
+            this.panelPrecio.Controls.Add(this.txtPrecio);
+            this.panelPrecio.Location = new System.Drawing.Point(22, 333);
+            this.panelPrecio.Name = "panelPrecio";
+            this.panelPrecio.Size = new System.Drawing.Size(133, 106);
+            this.panelPrecio.TabIndex = 24;
+            // 
+            // ConceptoId
+            // 
+            this.ConceptoId.HeaderText = "";
+            this.ConceptoId.Name = "ConceptoId";
+            this.ConceptoId.ReadOnly = true;
+            this.ConceptoId.Visible = false;
+            // 
+            // GridBtnSel
+            // 
+            this.GridBtnSel.HeaderText = "";
+            this.GridBtnSel.Name = "GridBtnSel";
+            this.GridBtnSel.ReadOnly = true;
+            this.GridBtnSel.Width = 20;
+            // 
+            // ConceptoDescripcion
+            // 
+            this.ConceptoDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConceptoDescripcion.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ConceptoDescripcion.HeaderText = "Descripción";
+            this.ConceptoDescripcion.Name = "ConceptoDescripcion";
+            this.ConceptoDescripcion.ReadOnly = true;
+            // 
+            // ConceptoTipo
+            // 
+            this.ConceptoTipo.HeaderText = "";
+            this.ConceptoTipo.Name = "ConceptoTipo";
+            this.ConceptoTipo.ReadOnly = true;
+            this.ConceptoTipo.Visible = false;
+            // 
+            // ConceptoReferenciaId
+            // 
+            this.ConceptoReferenciaId.HeaderText = "";
+            this.ConceptoReferenciaId.Name = "ConceptoReferenciaId";
+            this.ConceptoReferenciaId.ReadOnly = true;
+            this.ConceptoReferenciaId.Visible = false;
+            // 
+            // ConceptoReferenciaDescripcion
+            // 
+            this.ConceptoReferenciaDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConceptoReferenciaDescripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ConceptoReferenciaDescripcion.HeaderText = "Referencia";
+            this.ConceptoReferenciaDescripcion.Name = "ConceptoReferenciaDescripcion";
+            this.ConceptoReferenciaDescripcion.ReadOnly = true;
             // 
             // FrmConceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 500);
+            this.ClientSize = new System.Drawing.Size(760, 536);
             this.Controls.Add(this.panel1);
             this.Name = "FrmConceptos";
             this.Text = "Conceptos";
@@ -471,6 +501,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridPrecios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridConceptos)).EndInit();
+            this.panelPrecio.ResumeLayout(false);
+            this.panelPrecio.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -485,12 +517,6 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DataGridView GridConceptos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoId;
-        private System.Windows.Forms.DataGridViewButtonColumn BtnGrdSel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoReferenciaId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoReferenciaDescripcion;
         private System.Windows.Forms.Label lblTituloGrid;
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnEditar;
@@ -512,5 +538,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioMonedaSigno;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioValor;
         private System.Windows.Forms.Label lblSinDatos;
+        private System.Windows.Forms.CheckBox chkPrecio;
+        private System.Windows.Forms.Panel panelPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoId;
+        private System.Windows.Forms.DataGridViewButtonColumn GridBtnSel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoReferenciaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoReferenciaDescripcion;
     }
 }
