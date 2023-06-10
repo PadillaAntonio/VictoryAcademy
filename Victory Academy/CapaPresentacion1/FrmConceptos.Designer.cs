@@ -119,7 +119,6 @@
             this.lblSinDatos.Size = new System.Drawing.Size(174, 25);
             this.lblSinDatos.TabIndex = 22;
             this.lblSinDatos.Text = "NO HAY DATOS";
-            this.lblSinDatos.Click += new System.EventHandler(this.lblSinDatos_Click);
             // 
             // txtBusqueda
             // 
@@ -181,7 +180,6 @@
             this.lblMoneda.Size = new System.Drawing.Size(95, 25);
             this.lblMoneda.TabIndex = 16;
             this.lblMoneda.Text = "Moneda:";
-            this.lblMoneda.Click += new System.EventHandler(this.lblMoneda_Click);
             // 
             // GridPrecios
             // 
@@ -427,7 +425,6 @@
             this.chkPrecio.TabIndex = 23;
             this.chkPrecio.Text = "Precio";
             this.chkPrecio.UseVisualStyleBackColor = false;
-            this.chkPrecio.CheckedChanged += new System.EventHandler(this.chkPrecio_CheckedChanged);
             this.chkPrecio.Click += new System.EventHandler(this.chkPrecio_Click);
             // 
             // panelPrecio

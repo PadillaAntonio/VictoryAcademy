@@ -130,21 +130,6 @@ namespace CapaPresentacion1
             }    
         }
 
-        private void lblSinDatos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkPrecio_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblMoneda_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void chkPrecio_Click(object sender, EventArgs e)
         {
             MostrarPrecio(0);
